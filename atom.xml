@@ -5,7 +5,7 @@
   <subtitle><![CDATA[糖分很重要哈!!!]]></subtitle>
   <link href="/my-blog/atom.xml" rel="self"/>
   <link href="http://gin280.github.io/my-blog/my-blog//"/>
-  <updated>2015-07-28T16:14:54.990Z</updated>
+  <updated>2015-07-28T16:33:03.634Z</updated>
   <id>http://gin280.github.io/my-blog/my-blog//</id>
   
   <author>
@@ -16,15 +16,30 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title><![CDATA[2]]></title>
+    <link href="http://gin280.github.io/my-blog/my-blog/2015/07/29/2/"/>
+    <id>http://gin280.github.io/my-blog/my-blog/2015/07/29/2/</id>
+    <published>2015-07-28T16:32:56.000Z</published>
+    <updated>2015-07-28T16:33:03.634Z</updated>
+    <content type="html"><![CDATA[<p>22222</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>22222</p>
+]]>
+    </summary>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[1]]></title>
     <link href="http://gin280.github.io/my-blog/my-blog/2015/07/29/1/"/>
     <id>http://gin280.github.io/my-blog/my-blog/2015/07/29/1/</id>
     <published>2015-07-28T16:14:37.000Z</published>
-    <updated>2015-07-28T16:14:54.990Z</updated>
-    <content type="html"><![CDATA[<p>112233333333</p>
+    <updated>2015-07-28T16:31:55.189Z</updated>
+    <content type="html"><![CDATA[<p>112233333333dsdds</p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>112233333333</p>
+    <![CDATA[<p>112233333333dsdds</p>
 ]]>
     </summary>
     
@@ -97,7 +112,7 @@
   </entry>
   
   <entry>
-    <title><![CDATA[新的开始]]></title>
+    <title><![CDATA[文章2]]></title>
     <link href="http://gin280.github.io/my-blog/my-blog/2014/05/07/abc/"/>
     <id>http://gin280.github.io/my-blog/my-blog/2014/05/07/abc/</id>
     <published>2014-05-07T10:44:12.000Z</published>
