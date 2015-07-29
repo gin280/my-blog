@@ -47,7 +47,7 @@
 
 
 
-  <title> 1 // 玉桂芳香 </title>
+  <title>  // 玉桂芳香 </title>
 </head>
 
 <body>
@@ -168,7 +168,7 @@
           
           
             
-              1
+              
             
           
         </h1>
@@ -176,7 +176,7 @@
 
       <div class="post-meta">
         <span class="post-time">
-          发表于 2015-07-29
+          发表于 2015-07-30
         </span>
 
         
@@ -185,8 +185,8 @@
           
             <span class="post-comments-count">
             &nbsp; | &nbsp;
-            <a href="/my-blog/2015/07/29/1/#comments" >
-              <span class="post-comments-count ds-thread-count" data-thread-key="2015/07/29/1/"></span>
+            <a href="/my-blog/2015/07/30/tab/#comments" >
+              <span class="post-comments-count ds-thread-count" data-thread-key="2015/07/30/tab/"></span>
             </a>
           </span>
           
@@ -200,8 +200,38 @@
       
 
       
-        <p>112233333333dsdds</p>
+        <h2 id="jquery中如何实现标签切换效果">jquery中如何实现标签切换效果</h2><p>核心代码：</p>
+<pre><code><span class="doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;<span class="title">html</span> <span class="attribute">lang</span>=<span class="value">"en"</span>&gt;</span>
+<span class="tag">&lt;<span class="title">head</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">meta</span> <span class="attribute">charset</span>=<span class="value">"UTF-8"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">title</span>&gt;</span>tab<span class="tag">&lt;/<span class="title">title</span>&gt;</span>
 
+<span class="tag">&lt;/<span class="title">head</span>&gt;</span>
+<span class="tag">&lt;<span class="title">body</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">ul</span> <span class="attribute">class</span>=<span class="value">"tab"</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">li</span> <span class="attribute">class</span>=<span class="value">"active"</span> <span class="attribute">data-title</span>=<span class="value">"d1"</span>&gt;</span>1<span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">li</span> <span class="attribute">data-title</span>=<span class="value">"d2"</span>&gt;</span>2<span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">li</span> <span class="attribute">data-title</span>=<span class="value">"d3"</span>&gt;</span>3<span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">ul</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"content"</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"d1"</span>&gt;</span>1111<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"d2"</span> <span class="attribute">style</span>=<span class="value">"display:none"</span>&gt;</span>2222<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"d3"</span> <span class="attribute">style</span>=<span class="value">"display:none"</span>&gt;</span>3333<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"d4"</span> <span class="attribute">style</span>=<span class="value">"display:none"</span>&gt;</span>4444<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"jquery.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>    
+<span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="javascript">
+    $(<span class="string">'ul &gt; li'</span>).click(tab);
+    <span class="function"><span class="keyword">function</span> <span class="title">tab</span>(<span class="params"></span>) </span>{
+        $(<span class="keyword">this</span>).addClass(<span class="string">'active'</span>).siblings().removeClass(<span class="string">'active'</span>);
+        <span class="keyword">var</span> tab = $(<span class="keyword">this</span>).attr(<span class="string">'title'</span>);
+        $(<span class="string">'#'</span>+tab).show().siblings().hide();
+    }
+</span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">body</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">html</span>&gt;</span>
+</code></pre>
       
     </div>
 
@@ -212,13 +242,13 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/my-blog/2015/07/29/2/">2</a>
+              <a href="/my-blog/2015/07/30/js-事件代理/"></a>
             
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/my-blog/2015/06/14/文章4/">文章4</a>
+              <a href="/my-blog/2015/07/30/font/"></a>
             
           </div>
         </div>
@@ -236,8 +266,8 @@
     
       <div class="comments" id="comments">
         
-          <div class="ds-thread" data-thread-key="2015/07/29/1/"
-               data-title="1" data-url="http://gin280.github.io/my-blog/2015/07/29/1/">
+          <div class="ds-thread" data-thread-key="2015/07/30/tab/"
+               data-title="" data-url="http://gin280.github.io/my-blog/2015/07/30/tab/">
           </div>
         
       </div>
@@ -351,7 +381,7 @@
           <div class="post-toc">
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#jquery中如何实现标签切换效果"><span class="nav-number">1.</span> <span class="nav-text">jquery中如何实现标签切换效果</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
