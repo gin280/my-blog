@@ -5,7 +5,7 @@
   <subtitle><![CDATA[糖分很重要哈!!!]]></subtitle>
   <link href="/my-blog/atom.xml" rel="self"/>
   <link href="http://gin280.github.io/my-blog/my-blog//"/>
-  <updated>2015-08-03T02:47:26.573Z</updated>
+  <updated>2015-08-04T13:49:54.948Z</updated>
   <id>http://gin280.github.io/my-blog/my-blog//</id>
   
   <author>
@@ -14,6 +14,56 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[一张图搞定浏览器兼容性问题]]></title>
+    <link href="http://gin280.github.io/my-blog/my-blog/2015/01/23/%E4%B8%80%E5%BC%A0%E5%9B%BE%E6%90%9E%E5%AE%9A%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9%E6%80%A7%E9%97%AE%E9%A2%98/"/>
+    <id>http://gin280.github.io/my-blog/my-blog/2015/01/23/一张图搞定浏览器兼容性问题/</id>
+    <published>2015-01-23T06:11:46.000Z</published>
+    <updated>2015-08-04T13:49:54.948Z</updated>
+    <content type="html"><![CDATA[<p><strong>一张图搞定浏览器兼容性问题</strong></p>
+<p><img src="/my-blog/images/ie.png" alt="">    </p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p><strong>一张图搞定浏览器兼容性问题</strong></p>
+<p><img src="/my-blog/images/ie.png" alt="">    </p>
+]]>
+    </summary>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[CSS3中REM的使用]]></title>
+    <link href="http://gin280.github.io/my-blog/my-blog/2015/01/12/CSS3%E4%B8%ADREM%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
+    <id>http://gin280.github.io/my-blog/my-blog/2015/01/12/CSS3中REM的使用/</id>
+    <published>2015-01-12T06:31:46.000Z</published>
+    <updated>2015-08-04T13:46:03.467Z</updated>
+    <content type="html"><![CDATA[<p><strong>CSS3中REM的使用</strong></p>
+<p>在页面中设置字体，我们一般用px，em或者是%。</p>
+<p>px的用法我想大家都知道得了 ，就不废话了</p>
+<h3 id="em">em</h3><p>&emsp;&emsp;一般都是以body的font-size为基准</p>
+<pre><code><span class="tag">body</span> <span class="rules">{
+    <span class="rule"><span class="attribute">font-size</span>:<span class="value"> <span class="number">62.5%</span></span></span>;
+    <span class="comment">/*10/16x100% = 62.5% */</span>
+    }</span>
+<span class="tag">h1</span> <span class="rules">{
+    <span class="rule"><span class="attribute">font-size</span>:<span class="value"><span class="number">2em</span></span></span>;
+    }</span>
+<span class="tag">p</span> <span class="rules">{ 
+    <span class="rule"><span class="attribute">font-size</span>:<span class="value"><span class="number">1.6em</span></span></span>;
+    }</span>
+</code></pre><p>&emsp;&emsp;以为用em一般要知道其父元素的font-size，所以还是比较麻烦的，相对于后面的rem。</p>
+<h3 id="rem">rem</h3><p>&emsp;&emsp;w3c对于其的描述是“font size of the root element，即是相对于根元素的。</p>
+<p>所以只要设置了body的font-size 就能相对于它来进行字体大小的设置了。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p><strong>CSS3中REM的使用</strong></p>
+<p>在页面中设置字体，我们一般用px，em或者是%。</p>
+<p>px的用法我想大家都知道得了 ，就不废话了</p>
+<h3 id="em">em</h3><p>&emsp;&emsp;一般都是以body]]>
+    </summary>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[js 事件代理]]></title>
