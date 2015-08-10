@@ -316,6 +316,146 @@
           
           
             
+              <a class="post-title-link" href="/my-blog/2015/01/13/纯CSS实现轮播图/">
+                纯CSS实现轮播图
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于 2015-01-13
+        </span>
+
+        
+
+        
+          
+            <span class="post-comments-count">
+            &nbsp; | &nbsp;
+            <a href="/my-blog/2015/01/13/纯CSS实现轮播图/#comments" >
+              <span class="post-comments-count ds-thread-count" data-thread-key="2015/01/13/纯CSS实现轮播图/"></span>
+            </a>
+          </span>
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <p>直接上代码：<br>html：</p>
+<pre><code><span class="doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;<span class="title">html</span> <span class="attribute">lang</span>=<span class="value">"en"</span>&gt;</span>
+<span class="tag">&lt;<span class="title">head</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">meta</span> <span class="attribute">charset</span>=<span class="value">"UTF-8"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">title</span>&gt;</span>SLIDE<span class="tag">&lt;/<span class="title">title</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">link</span> <span class="attribute">rel</span>=<span class="value">"stylesheet"</span> <span class="attribute">href</span>=<span class="value">"css/slide.css"</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">head</span>&gt;</span>
+<span class="tag">&lt;<span class="title">body</span>&gt;</span>
+<span class="tag">&lt;<span class="title">ul</span> <span class="attribute">class</span>=<span class="value">"tab"</span>&gt;</span>
+            <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#d1"</span>&gt;</span>1<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+            <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#d2"</span>&gt;</span>2<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+            <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#d3"</span>&gt;</span>3<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+        <span class="tag">&lt;/<span class="title">ul</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"wrap"</span>&gt;</span>
+
+        <span class="comment">&lt;!-- tab --&gt;</span>
+        <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"content"</span>&gt;</span>
+            <span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"d1"</span>&gt;</span>1111<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+            <span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"d2"</span>&gt;</span>2222<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+            <span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"d3"</span>&gt;</span>3333<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+        <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+        <span class="comment">&lt;!-- content --&gt;</span>
+    <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+    <span class="comment">&lt;!-- wrap --&gt;</span>
+<span class="tag">&lt;/<span class="title">body</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">html</span>&gt;</span>
+</code></pre><p>scss：</p>
+<pre><code><span class="class">.wrap</span> {
+    <span class="attribute">width</span>: <span class="number">600px</span>;
+    <span class="attribute">height</span>: <span class="number">300px</span>;
+    <span class="attribute">border</span>: <span class="number">1px</span> solid <span class="hexcolor">#000</span>;
+    <span class="attribute">margin</span>: <span class="number">0</span> auto;
+    <span class="attribute">position</span>: relative;
+    <span class="attribute">overflow</span>: hidden;
+}
+
+<span class="tag">ul</span> {
+
+    <span class="attribute">list-style</span>: none;
+    <span class="attribute">z-index</span>: <span class="number">99999</span>;
+    <span class="tag">li</span> {
+        <span class="attribute">width</span>: <span class="number">100px</span>;
+        <span class="attribute">height</span>: <span class="number">50px</span>;
+        <span class="attribute">text-align</span>: center;
+        <span class="attribute">background-color</span>: red;
+        <span class="attribute">color</span>: <span class="hexcolor">#fff</span>;
+        <span class="attribute">border-bottom</span>: <span class="number">4px</span> solid <span class="hexcolor">#fff</span>;
+        <span class="attribute">z-index</span>: <span class="number">99999</span>;
+    }
+}
+
+<span class="class">.content</span> {
+    <span class="attribute">overflow</span>: hidden;
+    <span class="tag">div</span> {
+        <span class="attribute">width</span>: <span class="number">600px</span>;
+        <span class="attribute">height</span>: <span class="number">300px</span>;
+    }
+}
+
+<span class="id">#d1</span> {
+    <span class="attribute">background-color</span>: blue;
+}
+
+<span class="id">#d2</span> {
+    <span class="attribute">background-color</span>: yellow;
+}
+
+<span class="id">#d3</span> {
+    <span class="attribute">background-color</span>: cyan;
+}
+
+<span class="tag">body</span> {
+    <span class="attribute">background-color</span>: <span class="hexcolor">#333</span>;
+}
+</code></pre>
+        
+      
+    </div>
+
+    <div class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </div>
+  </div>
+
+
+    
+      
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
               <a class="post-title-link" href="/my-blog/2015/01/12/CSS3中REM的使用/">
                 CSS3中REM的使用
               </a>
@@ -637,9 +777,226 @@
 
 
     
+      
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
+              <a class="post-title-link" href="/my-blog/2014/11/13/AI中的canvas插件/">
+                AI中的canvas插件
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于 2014-11-13
+        </span>
+
+        
+
+        
+          
+            <span class="post-comments-count">
+            &nbsp; | &nbsp;
+            <a href="/my-blog/2014/11/13/AI中的canvas插件/#comments" >
+              <span class="post-comments-count ds-thread-count" data-thread-key="2014/11/13/AI中的canvas插件/"></span>
+            </a>
+          </span>
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <p>大家都知道在ai中可以直接导出svg，如果想把在ai中做好的图形导出为canvas，可以用<em>ai2canvas</em>这个插件。</p>
+<p>下载地址：</p>
+<p><a href="http://blog.mikeswanson.com/ai2canvas" target="_blank" rel="external">http://blog.mikeswanson.com/ai2canvas</a></p>
+<p>可以到上面的链接中下载适合自己的版本。</p>
+<p>安装方法：</p>
+<p>把下载来的插件中的<em>Ai2Canvas.aip</em>文件复制粘贴到ai的增效工具文件夹中，然后就可以在ai中用<em>导出</em>命令导出canvas格式了。</p>
+
+        
+      
+    </div>
+
+    <div class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </div>
+  </div>
+
+
+    
+      
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
+              <a class="post-title-link" href="/my-blog/2014/11/13/论渐进增强和优雅降级的区别/">
+                论渐进增强和优雅降级的区别
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于 2014-11-13
+        </span>
+
+        
+
+        
+          
+            <span class="post-comments-count">
+            &nbsp; | &nbsp;
+            <a href="/my-blog/2014/11/13/论渐进增强和优雅降级的区别/#comments" >
+              <span class="post-comments-count ds-thread-count" data-thread-key="2014/11/13/论渐进增强和优雅降级的区别/"></span>
+            </a>
+          </span>
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <h2 id="什么是渐进增强（progressive_enhancement）、优雅降级（graceful_degradation）呢？">什么是渐进增强（progressive enhancement）、优雅降级（graceful degradation）呢？</h2><p>渐进增强 progressive enhancement：针对低版本浏览器进行构建页面，保证最基本的功能，然后再针对高级浏览器进行效果、交互等改进和追加功能达到更好的用户体验。</p>
+<p>优雅降级 graceful degradation：一开始就构建完整的功能，然后再针对低版本浏览器进行兼容。</p>
+<p>区别：优雅降级是从复杂的现状开始，并试图减少用户体验的供给，而渐进增强则是从一个非常基础的，能够起作用的版本开始，并不断扩充，以适应未来环境的需要。降级（功能衰减）意味着往回看；而渐进增强则意味着朝前看，同时保证其根基处于安全地带。</p>
+<h2 id="“优雅降级”观点">“优雅降级”观点</h2><p>“优雅降级”观点认为应该针对那些最高级、最完善的浏览器来设计网站。而将那些被认为“过时”或有功能缺失的浏览器下的测试工作安排在开发周期的最后阶段，并把测试对象限定为主流浏览器（如 IE、Mozilla 等）的前一个版本。</p>
+<p>在这种设计范例下，旧版的浏览器被认为仅能提供“简陋却无妨 (poor, but passable)” 的浏览体验。你可以做一些小的调整来适应某个特定的浏览器。但由于它们并非我们所关注的焦点，因此除了修复较大的错误之外，其它的差异将被直接忽略。</p>
+<h2 id="“渐进增强”观点">“渐进增强”观点</h2><p>“渐进增强”观点则认为应关注于内容本身。</p>
+<p>内容是我们建立网站的诱因。有的网站展示它，有的则收集它，有的寻求，有的操作，还有的网站甚至会包含以上的种种，但相同点是它们全都涉及到内容。这使得“渐进增强”成为一种更为合理的设计范例。这也是它立即被 Yahoo! 所采纳并用以构建其“分级式浏览器支持 (Graded Browser Support)”策略的原因所在。</p>
+<p>最后我们也可以用modernizr.js这样的库来进行特性检测。</p>
+
+        
+      
+    </div>
+
+    <div class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </div>
+  </div>
+
+
+    
+      
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
+              <a class="post-title-link" href="/my-blog/2014/11/13/淘宝 NPM 镜像/">
+                淘宝 NPM 镜像
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于 2014-11-13
+        </span>
+
+        
+
+        
+          
+            <span class="post-comments-count">
+            &nbsp; | &nbsp;
+            <a href="/my-blog/2014/11/13/淘宝 NPM 镜像/#comments" >
+              <span class="post-comments-count ds-thread-count" data-thread-key="2014/11/13/淘宝 NPM 镜像/"></span>
+            </a>
+          </span>
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <p>平时用npm安装包的时候下载速度很慢的同学，可以试试这个淘宝NPM镜像<br>使用方法是：</p>
+<pre><code>$ <span class="built_in">npm</span> install -g cnpm --registry=<span class="attribute">https</span>:<span class="regexp">//</span>registry.<span class="built_in">npm</span>.taobao.org
+</code></pre><p>然后就可以在命令行工具中这样写</p>
+<pre><code>$ cnpm <span class="keyword">install</span> gulp
+</code></pre>
+        
+      
+    </div>
+
+    <div class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </div>
+  </div>
+
+
+    
   </div>
 
   
+  <div class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/my-blog/page/2/">2</a><a class="extend next" rel="next" href="/my-blog/page/2/">&raquo;</a>
+  </div>
+
 
         </div>
 
@@ -671,7 +1028,7 @@
         <div class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/my-blog/archives/">
-              <span class="site-state-item-count">6</span>
+              <span class="site-state-item-count">15</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

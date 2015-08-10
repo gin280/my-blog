@@ -47,7 +47,7 @@
 
 
 
-  <title> 一张图搞定浏览器兼容性问题 // 玉桂芳香 </title>
+  <title> JS原型继承 // 玉桂芳香 </title>
 </head>
 
 <body>
@@ -168,7 +168,7 @@
           
           
             
-              一张图搞定浏览器兼容性问题
+              JS原型继承
             
           
         </h1>
@@ -176,7 +176,7 @@
 
       <div class="post-meta">
         <span class="post-time">
-          发表于 2015-01-23
+          发表于 2014-11-08
         </span>
 
         
@@ -185,8 +185,8 @@
           
             <span class="post-comments-count">
             &nbsp; | &nbsp;
-            <a href="/my-blog/2015/01/23/一张图搞定浏览器兼容性问题/#comments" >
-              <span class="post-comments-count ds-thread-count" data-thread-key="2015/01/23/一张图搞定浏览器兼容性问题/"></span>
+            <a href="/my-blog/2014/11/08/JS原型继承/#comments" >
+              <span class="post-comments-count ds-thread-count" data-thread-key="2014/11/08/JS原型继承/"></span>
             </a>
           </span>
           
@@ -200,9 +200,40 @@
       
 
       
-        <p><strong>一张图搞定浏览器兼容性问题</strong></p>
-<p><img src="/my-blog/images/ie.png" alt="">    </p>
-
+        <p>原型继承的一般定义是当查找一个对象的属性时，Js会向上遍历原型链，直到找到给定名称的属性为止。</p>
+<p>大多数JS的实现用<strong>proto</strong>属性来表示一个对象的原型链。<br>下面的代码展示了js引擎是如何查找属性的：</p>
+<pre><code>    <span class="function"><span class="keyword">function</span> <span class="title">getPtoperty</span><span class="params">(obj,prop)</span> </span>{
+<span class="keyword">if</span> (obj.hasOwnProperty(prop)) {
+  <span class="keyword">return</span> obj[prop];
+}<span class="keyword">else</span> <span class="keyword">if</span> {
+  <span class="keyword">return</span> getPtoperty(obj.__proto__,prop)
+} <span class="keyword">else</span> {
+  <span class="keyword">return</span> <span class="literal">undefined</span>;
+}
+  }
+</code></pre><p>举一个简单的例子来说，二维点，拥有二维坐标 x y ，同似拥有一个 print 方法。用之前我们说过的原型继承的定义，我们创建一个对象 Point ，拥有三个属性：x，y 和 print 。为了能创建一个新的二维点，我们需要创建一个新的对象，让他其中的 <strong>proto</strong> 属性指向 Point ：</p>
+<pre><code>var Point = {
+<span class="string">x:</span><span class="number">0</span>,
+<span class="string">y:</span><span class="number">0</span>,
+<span class="string">print:</span>function() {
+  console.log(<span class="keyword">this</span>.x,<span class="keyword">this</span>.y)
+}
+  }
+  var p = { <span class="string">x:</span><span class="number">10</span>,<span class="string">y:</span><span class="number">20</span>,<span class="string">__proto__:</span>Point};
+  p.print();
+</code></pre><p>但是一般我们的原型继承的写法不会写成上面那样，而是像下面这样的：</p>
+<pre><code><span class="function"><span class="keyword">function</span> <span class="title">Point</span>(<span class="params">x,y</span>) </span>{
+<span class="keyword">this</span>.x = x;
+<span class="keyword">this</span>.y = y;
+  }
+  Point.prototype = {
+print:<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>{
+  <span class="built_in">console</span>.log(<span class="keyword">this</span>.x,<span class="keyword">this</span>.y);
+}
+      }
+  <span class="keyword">var</span> p = <span class="keyword">new</span> Point(<span class="number">10</span>,<span class="number">20</span>);
+  p.print();
+</code></pre>
       
     </div>
 
@@ -213,13 +244,11 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/my-blog/2015/01/28/在sass中用breakpoint写media query/">在sass中用breakpoint写media query</a>
+              <a href="/my-blog/2014/11/09/JS三元运算符/">JS三元运算符</a>
             
           </div>
 
           <div class="post-nav-next post-nav-item">
-            
-              <a href="/my-blog/2015/01/13/纯CSS实现轮播图/">纯CSS实现轮播图</a>
             
           </div>
         </div>
@@ -237,8 +266,8 @@
     
       <div class="comments" id="comments">
         
-          <div class="ds-thread" data-thread-key="2015/01/23/一张图搞定浏览器兼容性问题/"
-               data-title="一张图搞定浏览器兼容性问题" data-url="http://gin280.github.io/my-blog/2015/01/23/一张图搞定浏览器兼容性问题/">
+          <div class="ds-thread" data-thread-key="2014/11/08/JS原型继承/"
+               data-title="JS原型继承" data-url="http://gin280.github.io/my-blog/2014/11/08/JS原型继承/">
           </div>
         
       </div>

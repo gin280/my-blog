@@ -47,7 +47,7 @@
 
 
 
-  <title> 一张图搞定浏览器兼容性问题 // 玉桂芳香 </title>
+  <title> jQuery的deferred对象 // 玉桂芳香 </title>
 </head>
 
 <body>
@@ -168,7 +168,7 @@
           
           
             
-              一张图搞定浏览器兼容性问题
+              jQuery的deferred对象
             
           
         </h1>
@@ -176,7 +176,7 @@
 
       <div class="post-meta">
         <span class="post-time">
-          发表于 2015-01-23
+          发表于 2014-11-10
         </span>
 
         
@@ -185,8 +185,8 @@
           
             <span class="post-comments-count">
             &nbsp; | &nbsp;
-            <a href="/my-blog/2015/01/23/一张图搞定浏览器兼容性问题/#comments" >
-              <span class="post-comments-count ds-thread-count" data-thread-key="2015/01/23/一张图搞定浏览器兼容性问题/"></span>
+            <a href="/my-blog/2014/11/10/jQuery的deferred对象/#comments" >
+              <span class="post-comments-count ds-thread-count" data-thread-key="2014/11/10/jQuery的deferred对象/"></span>
             </a>
           </span>
           
@@ -200,9 +200,26 @@
       
 
       
-        <p><strong>一张图搞定浏览器兼容性问题</strong></p>
-<p><img src="/my-blog/images/ie.png" alt="">    </p>
-
+        <p>deferred对象就是jquery的回调函数的解决方案。它解决了如何处理耗时操作问题。</p>
+<p>在没有deferred对象之前ajax的传统写法：</p>
+<pre><code>$.ajax({
+  url:<span class="string">'test.html'</span>,
+  success:<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>{
+    <span class="built_in">console</span>.log(<span class="string">'success'</span>);
+  },
+  error:<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>{
+    <span class="built_in">console</span>.log(<span class="string">'wrong'</span>);
+  }
+   });
+</code></pre><p>新的写法是：</p>
+<pre><code>$.ajax(<span class="string">'test.html'</span>)
+.done(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>{
+  <span class="built_in">console</span>.log(<span class="string">'success'</span>)
+})
+.fail(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>{
+  <span class="built_in">console</span>.log(<span class="string">'wrong'</span>)
+})
+</code></pre>
       
     </div>
 
@@ -213,13 +230,13 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/my-blog/2015/01/28/在sass中用breakpoint写media query/">在sass中用breakpoint写media query</a>
+              <a href="/my-blog/2014/11/11/jQuery中的end()方法/">jQuery中的end()方法</a>
             
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/my-blog/2015/01/13/纯CSS实现轮播图/">纯CSS实现轮播图</a>
+              <a href="/my-blog/2014/11/09/JS三元运算符/">JS三元运算符</a>
             
           </div>
         </div>
@@ -237,8 +254,8 @@
     
       <div class="comments" id="comments">
         
-          <div class="ds-thread" data-thread-key="2015/01/23/一张图搞定浏览器兼容性问题/"
-               data-title="一张图搞定浏览器兼容性问题" data-url="http://gin280.github.io/my-blog/2015/01/23/一张图搞定浏览器兼容性问题/">
+          <div class="ds-thread" data-thread-key="2014/11/10/jQuery的deferred对象/"
+               data-title="jQuery的deferred对象" data-url="http://gin280.github.io/my-blog/2014/11/10/jQuery的deferred对象/">
           </div>
         
       </div>
