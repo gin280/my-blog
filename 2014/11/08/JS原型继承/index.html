@@ -47,7 +47,7 @@
 
 
 
-  <title> 在sass中用breakpoint写media query // 玉桂芳香 </title>
+  <title> JS原型继承 // 玉桂芳香 </title>
 </head>
 
 <body>
@@ -168,7 +168,7 @@
           
           
             
-              在sass中用breakpoint写media query
+              JS原型继承
             
           
         </h1>
@@ -176,7 +176,7 @@
 
       <div class="post-meta">
         <span class="post-time">
-          发表于 2015-01-28
+          发表于 2014-11-08
         </span>
 
         
@@ -185,8 +185,8 @@
           
             <span class="post-comments-count">
             &nbsp; | &nbsp;
-            <a href="/my-blog/2015/01/28/在sass中用breakpoint写media query/#comments" >
-              <span class="post-comments-count ds-thread-count" data-thread-key="2015/01/28/在sass中用breakpoint写media query/"></span>
+            <a href="/my-blog/2014/11/08/JS原型继承/#comments" >
+              <span class="post-comments-count ds-thread-count" data-thread-key="2014/11/08/JS原型继承/"></span>
             </a>
           </span>
           
@@ -200,21 +200,40 @@
       
 
       
-        <h2 id="先设置好变量，以后好改">先设置好变量，以后好改</h2><p>// assume min-width (by default) if only a number</p>
-<pre><code><span class="variable">$high-tide</span><span class="value">: <span class="number">500px</span>;</span>
-</code></pre><p>// set min-width/max-width if both values are numbers</p>
-<pre><code><span class="variable">$ex-presidents</span><span class="value">: <span class="number">600px</span> <span class="number">800px</span>;</span>
-</code></pre><p>// if one value is a string, assume a feature/value pair</p>
-<pre><code>$surfboard-<span class="variable">width</span>: <span class="built_in">max</span>-<span class="variable">width</span> <span class="number">1000</span>px;
-</code></pre><h2 id="在sass中可以这样写">在sass中可以这样写</h2><p>scss：</p>
-<pre><code><span class="class">.my-style</span> {
- <span class="variable">@include</span> <span class="function">breakpoint</span>($high-tide) {
-   <span class="attribute">content</span>: <span class="string">'High tide'</span>;
- }
-</code></pre><p>   }</p>
-<p>css:</p>
-<p>   @media (min-width: 500px) {<br>     .reagan {<br>       content: ‘High tide’;<br>     }<br>   }</p>
-
+        <p>原型继承的一般定义是当查找一个对象的属性时，Js会向上遍历原型链，直到找到给定名称的属性为止。</p>
+<p>大多数JS的实现用<strong>proto</strong>属性来表示一个对象的原型链。<br>下面的代码展示了js引擎是如何查找属性的：</p>
+<pre><code>    <span class="function"><span class="keyword">function</span> <span class="title">getPtoperty</span><span class="params">(obj,prop)</span> </span>{
+<span class="keyword">if</span> (obj.hasOwnProperty(prop)) {
+  <span class="keyword">return</span> obj[prop];
+}<span class="keyword">else</span> <span class="keyword">if</span> {
+  <span class="keyword">return</span> getPtoperty(obj.__proto__,prop)
+} <span class="keyword">else</span> {
+  <span class="keyword">return</span> <span class="literal">undefined</span>;
+}
+  }
+</code></pre><p>举一个简单的例子来说，二维点，拥有二维坐标 x y ，同似拥有一个 print 方法。用之前我们说过的原型继承的定义，我们创建一个对象 Point ，拥有三个属性：x，y 和 print 。为了能创建一个新的二维点，我们需要创建一个新的对象，让他其中的 <strong>proto</strong> 属性指向 Point ：</p>
+<pre><code>var Point = {
+<span class="string">x:</span><span class="number">0</span>,
+<span class="string">y:</span><span class="number">0</span>,
+<span class="string">print:</span>function() {
+  console.log(<span class="keyword">this</span>.x,<span class="keyword">this</span>.y)
+}
+  }
+  var p = { <span class="string">x:</span><span class="number">10</span>,<span class="string">y:</span><span class="number">20</span>,<span class="string">__proto__:</span>Point};
+  p.print();
+</code></pre><p>但是一般我们的原型继承的写法不会写成上面那样，而是像下面这样的：</p>
+<pre><code><span class="function"><span class="keyword">function</span> <span class="title">Point</span>(<span class="params">x,y</span>) </span>{
+<span class="keyword">this</span>.x = x;
+<span class="keyword">this</span>.y = y;
+  }
+  Point.prototype = {
+print:<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>{
+  <span class="built_in">console</span>.log(<span class="keyword">this</span>.x,<span class="keyword">this</span>.y);
+}
+      }
+  <span class="keyword">var</span> p = <span class="keyword">new</span> Point(<span class="number">10</span>,<span class="number">20</span>);
+  p.print();
+</code></pre>
       
     </div>
 
@@ -225,11 +244,11 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/my-blog/2014/11/09/JS三元运算符/">JS三元运算符</a>
+            
           </div>
 
           <div class="post-nav-next post-nav-item">
-            
-              <a href="/my-blog/2015/01/23/一张图搞定浏览器兼容性问题/">一张图搞定浏览器兼容性问题</a>
             
           </div>
         </div>
@@ -247,8 +266,8 @@
     
       <div class="comments" id="comments">
         
-          <div class="ds-thread" data-thread-key="2015/01/28/在sass中用breakpoint写media query/"
-               data-title="在sass中用breakpoint写media query" data-url="http://gin280.github.io/my-blog/2015/01/28/在sass中用breakpoint写media query/">
+          <div class="ds-thread" data-thread-key="2014/11/08/JS原型继承/"
+               data-title="JS原型继承" data-url="http://gin280.github.io/my-blog/2014/11/08/JS原型继承/">
           </div>
         
       </div>
@@ -354,7 +373,7 @@
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#先设置好变量，以后好改"><span class="nav-number">1.</span> <span class="nav-text">先设置好变量，以后好改</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在sass中可以这样写"><span class="nav-number">2.</span> <span class="nav-text">在sass中可以这样写</span></a></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目录</p>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>

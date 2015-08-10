@@ -47,7 +47,7 @@
 
 
 
-  <title> 在sass中用breakpoint写media query // 玉桂芳香 </title>
+  <title> JS三元运算符 // 玉桂芳香 </title>
 </head>
 
 <body>
@@ -168,7 +168,7 @@
           
           
             
-              在sass中用breakpoint写media query
+              JS三元运算符
             
           
         </h1>
@@ -176,7 +176,7 @@
 
       <div class="post-meta">
         <span class="post-time">
-          发表于 2015-01-28
+          发表于 2014-11-09
         </span>
 
         
@@ -185,8 +185,8 @@
           
             <span class="post-comments-count">
             &nbsp; | &nbsp;
-            <a href="/my-blog/2015/01/28/在sass中用breakpoint写media query/#comments" >
-              <span class="post-comments-count ds-thread-count" data-thread-key="2015/01/28/在sass中用breakpoint写media query/"></span>
+            <a href="/my-blog/2014/11/09/JS三元运算符/#comments" >
+              <span class="post-comments-count ds-thread-count" data-thread-key="2014/11/09/JS三元运算符/"></span>
             </a>
           </span>
           
@@ -200,21 +200,9 @@
       
 
       
-        <h2 id="先设置好变量，以后好改">先设置好变量，以后好改</h2><p>// assume min-width (by default) if only a number</p>
-<pre><code><span class="variable">$high-tide</span><span class="value">: <span class="number">500px</span>;</span>
-</code></pre><p>// set min-width/max-width if both values are numbers</p>
-<pre><code><span class="variable">$ex-presidents</span><span class="value">: <span class="number">600px</span> <span class="number">800px</span>;</span>
-</code></pre><p>// if one value is a string, assume a feature/value pair</p>
-<pre><code>$surfboard-<span class="variable">width</span>: <span class="built_in">max</span>-<span class="variable">width</span> <span class="number">1000</span>px;
-</code></pre><h2 id="在sass中可以这样写">在sass中可以这样写</h2><p>scss：</p>
-<pre><code><span class="class">.my-style</span> {
- <span class="variable">@include</span> <span class="function">breakpoint</span>($high-tide) {
-   <span class="attribute">content</span>: <span class="string">'High tide'</span>;
- }
-</code></pre><p>   }</p>
-<p>css:</p>
-<p>   @media (min-width: 500px) {<br>     .reagan {<br>       content: ‘High tide’;<br>     }<br>   }</p>
-
+        <p>三元运算符的语法是<strong>条件？结果1：结果2；</strong> </p>
+<pre><code><span class="params">(<span class="number">1</span>===<span class="number">1</span>)</span> ? console.<span class="built_in">log</span><span class="params">(<span class="literal">true</span>)</span> : console.<span class="built_in">log</span><span class="params">(<span class="literal">false</span>)</span>;
+</code></pre>
       
     </div>
 
@@ -225,11 +213,13 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/my-blog/2014/11/10/jQuery的deferred对象/">jQuery的deferred对象</a>
+            
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/my-blog/2015/01/23/一张图搞定浏览器兼容性问题/">一张图搞定浏览器兼容性问题</a>
+              <a href="/my-blog/2014/11/08/JS原型继承/">JS原型继承</a>
             
           </div>
         </div>
@@ -247,8 +237,8 @@
     
       <div class="comments" id="comments">
         
-          <div class="ds-thread" data-thread-key="2015/01/28/在sass中用breakpoint写media query/"
-               data-title="在sass中用breakpoint写media query" data-url="http://gin280.github.io/my-blog/2015/01/28/在sass中用breakpoint写media query/">
+          <div class="ds-thread" data-thread-key="2014/11/09/JS三元运算符/"
+               data-title="JS三元运算符" data-url="http://gin280.github.io/my-blog/2014/11/09/JS三元运算符/">
           </div>
         
       </div>
@@ -354,7 +344,7 @@
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#先设置好变量，以后好改"><span class="nav-number">1.</span> <span class="nav-text">先设置好变量，以后好改</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在sass中可以这样写"><span class="nav-number">2.</span> <span class="nav-text">在sass中可以这样写</span></a></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目录</p>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>

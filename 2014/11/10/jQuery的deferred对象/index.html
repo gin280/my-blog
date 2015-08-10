@@ -47,7 +47,7 @@
 
 
 
-  <title> 在sass中用breakpoint写media query // 玉桂芳香 </title>
+  <title> jQuery的deferred对象 // 玉桂芳香 </title>
 </head>
 
 <body>
@@ -168,7 +168,7 @@
           
           
             
-              在sass中用breakpoint写media query
+              jQuery的deferred对象
             
           
         </h1>
@@ -176,7 +176,7 @@
 
       <div class="post-meta">
         <span class="post-time">
-          发表于 2015-01-28
+          发表于 2014-11-10
         </span>
 
         
@@ -185,8 +185,8 @@
           
             <span class="post-comments-count">
             &nbsp; | &nbsp;
-            <a href="/my-blog/2015/01/28/在sass中用breakpoint写media query/#comments" >
-              <span class="post-comments-count ds-thread-count" data-thread-key="2015/01/28/在sass中用breakpoint写media query/"></span>
+            <a href="/my-blog/2014/11/10/jQuery的deferred对象/#comments" >
+              <span class="post-comments-count ds-thread-count" data-thread-key="2014/11/10/jQuery的deferred对象/"></span>
             </a>
           </span>
           
@@ -200,21 +200,26 @@
       
 
       
-        <h2 id="先设置好变量，以后好改">先设置好变量，以后好改</h2><p>// assume min-width (by default) if only a number</p>
-<pre><code><span class="variable">$high-tide</span><span class="value">: <span class="number">500px</span>;</span>
-</code></pre><p>// set min-width/max-width if both values are numbers</p>
-<pre><code><span class="variable">$ex-presidents</span><span class="value">: <span class="number">600px</span> <span class="number">800px</span>;</span>
-</code></pre><p>// if one value is a string, assume a feature/value pair</p>
-<pre><code>$surfboard-<span class="variable">width</span>: <span class="built_in">max</span>-<span class="variable">width</span> <span class="number">1000</span>px;
-</code></pre><h2 id="在sass中可以这样写">在sass中可以这样写</h2><p>scss：</p>
-<pre><code><span class="class">.my-style</span> {
- <span class="variable">@include</span> <span class="function">breakpoint</span>($high-tide) {
-   <span class="attribute">content</span>: <span class="string">'High tide'</span>;
- }
-</code></pre><p>   }</p>
-<p>css:</p>
-<p>   @media (min-width: 500px) {<br>     .reagan {<br>       content: ‘High tide’;<br>     }<br>   }</p>
-
+        <p>deferred对象就是jquery的回调函数的解决方案。它解决了如何处理耗时操作问题。</p>
+<p>在没有deferred对象之前ajax的传统写法：</p>
+<pre><code>$.ajax({
+  url:<span class="string">'test.html'</span>,
+  success:<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>{
+    <span class="built_in">console</span>.log(<span class="string">'success'</span>);
+  },
+  error:<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>{
+    <span class="built_in">console</span>.log(<span class="string">'wrong'</span>);
+  }
+   });
+</code></pre><p>新的写法是：</p>
+<pre><code>$.ajax(<span class="string">'test.html'</span>)
+.done(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>{
+  <span class="built_in">console</span>.log(<span class="string">'success'</span>)
+})
+.fail(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>{
+  <span class="built_in">console</span>.log(<span class="string">'wrong'</span>)
+})
+</code></pre>
       
     </div>
 
@@ -225,11 +230,13 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/my-blog/2014/11/11/jQuery中的end()方法/">jQuery中的end()方法</a>
+            
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/my-blog/2015/01/23/一张图搞定浏览器兼容性问题/">一张图搞定浏览器兼容性问题</a>
+              <a href="/my-blog/2014/11/09/JS三元运算符/">JS三元运算符</a>
             
           </div>
         </div>
@@ -247,8 +254,8 @@
     
       <div class="comments" id="comments">
         
-          <div class="ds-thread" data-thread-key="2015/01/28/在sass中用breakpoint写media query/"
-               data-title="在sass中用breakpoint写media query" data-url="http://gin280.github.io/my-blog/2015/01/28/在sass中用breakpoint写media query/">
+          <div class="ds-thread" data-thread-key="2014/11/10/jQuery的deferred对象/"
+               data-title="jQuery的deferred对象" data-url="http://gin280.github.io/my-blog/2014/11/10/jQuery的deferred对象/">
           </div>
         
       </div>
@@ -354,7 +361,7 @@
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#先设置好变量，以后好改"><span class="nav-number">1.</span> <span class="nav-text">先设置好变量，以后好改</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在sass中可以这样写"><span class="nav-number">2.</span> <span class="nav-text">在sass中可以这样写</span></a></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目录</p>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>

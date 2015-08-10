@@ -189,4 +189,251 @@
     
   </entry>
   
+  <entry>
+    <title><![CDATA[AI中的canvas插件]]></title>
+    <link href="http://gin280.github.io/my-blog/my-blog/2014/11/13/AI%E4%B8%AD%E7%9A%84canvas%E6%8F%92%E4%BB%B6/"/>
+    <id>http://gin280.github.io/my-blog/my-blog/2014/11/13/AI中的canvas插件/</id>
+    <published>2014-11-13T13:44:45.000Z</published>
+    <updated>2015-08-10T05:46:26.323Z</updated>
+    <content type="html"><![CDATA[<p>大家都知道在ai中可以直接导出svg，如果想把在ai中做好的图形导出为canvas，可以用<em>ai2canvas</em>这个插件。</p>
+<p>下载地址：</p>
+<p><a href="http://blog.mikeswanson.com/ai2canvas" target="_blank" rel="external">http://blog.mikeswanson.com/ai2canvas</a></p>
+<p>可以到上面的链接中下载适合自己的版本。</p>
+<p>安装方法：</p>
+<p>把下载来的插件中的<em>Ai2Canvas.aip</em>文件复制粘贴到ai的增效工具文件夹中，然后就可以在ai中用<em>导出</em>命令导出canvas格式了。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>大家都知道在ai中可以直接导出svg，如果想把在ai中做好的图形导出为canvas，可以用<em>ai2canvas</em>这个插件。</p>
+<p>下载地址：</p>
+<p><a href="http://blog.mikeswanson.com/ai2canvas" ]]>
+    </summary>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[论渐进增强和优雅降级的区别]]></title>
+    <link href="http://gin280.github.io/my-blog/my-blog/2014/11/13/%E8%AE%BA%E6%B8%90%E8%BF%9B%E5%A2%9E%E5%BC%BA%E5%92%8C%E4%BC%98%E9%9B%85%E9%99%8D%E7%BA%A7%E7%9A%84%E5%8C%BA%E5%88%AB/"/>
+    <id>http://gin280.github.io/my-blog/my-blog/2014/11/13/论渐进增强和优雅降级的区别/</id>
+    <published>2014-11-13T13:28:14.000Z</published>
+    <updated>2015-08-10T05:46:48.492Z</updated>
+    <content type="html"><![CDATA[<h2 id="什么是渐进增强（progressive_enhancement）、优雅降级（graceful_degradation）呢？">什么是渐进增强（progressive enhancement）、优雅降级（graceful degradation）呢？</h2><p>渐进增强 progressive enhancement：针对低版本浏览器进行构建页面，保证最基本的功能，然后再针对高级浏览器进行效果、交互等改进和追加功能达到更好的用户体验。</p>
+<p>优雅降级 graceful degradation：一开始就构建完整的功能，然后再针对低版本浏览器进行兼容。</p>
+<p>区别：优雅降级是从复杂的现状开始，并试图减少用户体验的供给，而渐进增强则是从一个非常基础的，能够起作用的版本开始，并不断扩充，以适应未来环境的需要。降级（功能衰减）意味着往回看；而渐进增强则意味着朝前看，同时保证其根基处于安全地带。</p>
+<h2 id="“优雅降级”观点">“优雅降级”观点</h2><p>“优雅降级”观点认为应该针对那些最高级、最完善的浏览器来设计网站。而将那些被认为“过时”或有功能缺失的浏览器下的测试工作安排在开发周期的最后阶段，并把测试对象限定为主流浏览器（如 IE、Mozilla 等）的前一个版本。</p>
+<p>在这种设计范例下，旧版的浏览器被认为仅能提供“简陋却无妨 (poor, but passable)” 的浏览体验。你可以做一些小的调整来适应某个特定的浏览器。但由于它们并非我们所关注的焦点，因此除了修复较大的错误之外，其它的差异将被直接忽略。</p>
+<h2 id="“渐进增强”观点">“渐进增强”观点</h2><p>“渐进增强”观点则认为应关注于内容本身。</p>
+<p>内容是我们建立网站的诱因。有的网站展示它，有的则收集它，有的寻求，有的操作，还有的网站甚至会包含以上的种种，但相同点是它们全都涉及到内容。这使得“渐进增强”成为一种更为合理的设计范例。这也是它立即被 Yahoo! 所采纳并用以构建其“分级式浏览器支持 (Graded Browser Support)”策略的原因所在。</p>
+<p>最后我们也可以用modernizr.js这样的库来进行特性检测。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h2 id="什么是渐进增强（progressive_enhancement）、优雅降级（graceful_degradation）呢？">什么是渐进增强（progressive enhancement）、优雅降级（graceful degradation）呢？</h2><p>]]>
+    </summary>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[淘宝 NPM 镜像]]></title>
+    <link href="http://gin280.github.io/my-blog/my-blog/2014/11/13/%E6%B7%98%E5%AE%9D%20NPM%20%E9%95%9C%E5%83%8F/"/>
+    <id>http://gin280.github.io/my-blog/my-blog/2014/11/13/淘宝 NPM 镜像/</id>
+    <published>2014-11-13T13:11:15.000Z</published>
+    <updated>2015-08-10T05:47:18.908Z</updated>
+    <content type="html"><![CDATA[<p>平时用npm安装包的时候下载速度很慢的同学，可以试试这个淘宝NPM镜像<br>使用方法是：</p>
+<pre><code>$ <span class="built_in">npm</span> install -g cnpm --registry=<span class="attribute">https</span>:<span class="regexp">//</span>registry.<span class="built_in">npm</span>.taobao.org
+</code></pre><p>然后就可以在命令行工具中这样写</p>
+<pre><code>$ cnpm <span class="keyword">install</span> gulp
+</code></pre>]]></content>
+    <summary type="html">
+    <![CDATA[<p>平时用npm安装包的时候下载速度很慢的同学，可以试试这个淘宝NPM镜像<br>使用方法是：</p>
+<pre><code>$ <span class="built_in">npm</span> install -g cnpm --registry=<span class="]]>
+    </summary>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[HTML5的data-属性]]></title>
+    <link href="http://gin280.github.io/my-blog/my-blog/2014/11/12/HTML5%E7%9A%84data-%E5%B1%9E%E6%80%A7/"/>
+    <id>http://gin280.github.io/my-blog/my-blog/2014/11/12/HTML5的data-属性/</id>
+    <published>2014-11-12T13:24:15.000Z</published>
+    <updated>2015-08-10T05:45:59.652Z</updated>
+    <content type="html"><![CDATA[<p>HTML5的data-是用来定义自定义属性的。下面的是一个相关的例子：</p>
+<pre><code>    <span class="doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;<span class="title">html</span> <span class="attribute">lang</span>=<span class="value">"en"</span>&gt;</span>
+<span class="tag">&lt;<span class="title">head</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">meta</span> <span class="attribute">charset</span>=<span class="value">"UTF-8"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="title">title</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">style</span>&gt;</span><span class="css">
+<span class="class">.myOwn</span> <span class="rules">{
+  <span class="rule"><span class="attribute">background-color</span>:<span class="value"> <span class="hexcolor">#666</span></span></span>;
+  <span class="rule"><span class="attribute">text-align</span>:<span class="value"> center</span></span>;
+  <span class="rule"><span class="attribute">color</span>:<span class="value"> <span class="hexcolor">#fff</span></span></span>;
+  <span class="rule"><span class="attribute">border</span>:<span class="value"> <span class="number">1px</span> solid <span class="hexcolor">#000</span></span></span>;
+}</span>
+  </span><span class="tag">&lt;/<span class="title">style</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">head</span>&gt;</span>
+<span class="tag">&lt;<span class="title">body</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">data-myOwn</span>=<span class="value">"header"</span>&gt;</span>
+<span class="tag">&lt;<span class="title">h1</span>&gt;</span>我是个一个用了自定义属性的div<span class="tag">&lt;/<span class="title">h1</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">br</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span>&gt;</span>我什么都不是。。<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"js/jquery-1.7.2.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+<span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="javascript">
+  $(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>{
+<span class="keyword">var</span> el = $(<span class="string">'div'</span>);
+   el.each(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>{
+<span class="keyword">if</span>($(<span class="keyword">this</span>).attr(<span class="string">'data-myOwn'</span>) == <span class="string">'header'</span>) {
+  $(<span class="keyword">this</span>).addClass(<span class="string">'myOwn'</span>);
+}
+   })
+  })
+</span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">body</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">html</span>&gt;</span>
+</code></pre>]]></content>
+    <summary type="html">
+    <![CDATA[<p>HTML5的data-是用来定义自定义属性的。下面的是一个相关的例子：</p>
+<pre><code>    <span class="doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;<span cla]]>
+    </summary>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[jQuery中的end()方法]]></title>
+    <link href="http://gin280.github.io/my-blog/my-blog/2014/11/11/jQuery%E4%B8%AD%E7%9A%84end()%E6%96%B9%E6%B3%95/"/>
+    <id>http://gin280.github.io/my-blog/my-blog/2014/11/11/jQuery中的end()方法/</id>
+    <published>2014-11-11T13:04:25.000Z</published>
+    <updated>2015-08-10T05:45:35.083Z</updated>
+    <content type="html"><![CDATA[<p>对于end()方法，jquery文档的解释是：jquery回到最近的一个破坏性操作之前，就是将匹配的元素列表变为前一次状态。</p>
+<pre><code><span class="doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;<span class="title">html</span> <span class="attribute">lang</span>=<span class="value">"en"</span>&gt;</span>
+<span class="tag">&lt;<span class="title">head</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">meta</span> <span class="attribute">charset</span>=<span class="value">"UTF-8"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="title">title</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">style</span>&gt;</span><span class="css">
+
+  </span><span class="tag">&lt;/<span class="title">style</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">head</span>&gt;</span>
+<span class="tag">&lt;<span class="title">body</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"test"</span>&gt;</span>
+<span class="tag">&lt;<span class="title">h1</span>&gt;</span>H1<span class="tag">&lt;/<span class="title">h1</span>&gt;</span>
+<span class="tag">&lt;<span class="title">p</span>&gt;</span>P<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"js/jquery-1.7.2.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+<span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="javascript">
+$(<span class="string">'.test'</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>{
+  $(<span class="keyword">this</span>).find(<span class="string">'p'</span>).hide().end().hide();
+})
+</span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">body</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">html</span>&gt;</span>
+</code></pre><p>执行上面的代码后.test都看不见了。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>对于end()方法，jquery文档的解释是：jquery回到最近的一个破坏性操作之前，就是将匹配的元素列表变为前一次状态。</p>
+<pre><code><span class="doctype">&lt;!DOCTYPE html&gt;</span>
+<span cl]]>
+    </summary>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[jQuery的deferred对象]]></title>
+    <link href="http://gin280.github.io/my-blog/my-blog/2014/11/10/jQuery%E7%9A%84deferred%E5%AF%B9%E8%B1%A1/"/>
+    <id>http://gin280.github.io/my-blog/my-blog/2014/11/10/jQuery的deferred对象/</id>
+    <published>2014-11-10T13:08:22.000Z</published>
+    <updated>2015-08-10T05:45:08.963Z</updated>
+    <content type="html"><![CDATA[<p>deferred对象就是jquery的回调函数的解决方案。它解决了如何处理耗时操作问题。</p>
+<p>在没有deferred对象之前ajax的传统写法：</p>
+<pre><code>$.ajax({
+  url:<span class="string">'test.html'</span>,
+  success:<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>{
+    <span class="built_in">console</span>.log(<span class="string">'success'</span>);
+  },
+  error:<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>{
+    <span class="built_in">console</span>.log(<span class="string">'wrong'</span>);
+  }
+   });
+</code></pre><p>新的写法是：</p>
+<pre><code>$.ajax(<span class="string">'test.html'</span>)
+.done(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>{
+  <span class="built_in">console</span>.log(<span class="string">'success'</span>)
+})
+.fail(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>{
+  <span class="built_in">console</span>.log(<span class="string">'wrong'</span>)
+})
+</code></pre>]]></content>
+    <summary type="html">
+    <![CDATA[<p>deferred对象就是jquery的回调函数的解决方案。它解决了如何处理耗时操作问题。</p>
+<p>在没有deferred对象之前ajax的传统写法：</p>
+<pre><code>$.ajax({
+  url:<span class="string">'test.ht]]>
+    </summary>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[JS三元运算符]]></title>
+    <link href="http://gin280.github.io/my-blog/my-blog/2014/11/09/JS%E4%B8%89%E5%85%83%E8%BF%90%E7%AE%97%E7%AC%A6/"/>
+    <id>http://gin280.github.io/my-blog/my-blog/2014/11/09/JS三元运算符/</id>
+    <published>2014-11-09T13:11:22.000Z</published>
+    <updated>2015-08-10T05:44:34.899Z</updated>
+    <content type="html"><![CDATA[<p>三元运算符的语法是<strong>条件？结果1：结果2；</strong> </p>
+<pre><code><span class="params">(<span class="number">1</span>===<span class="number">1</span>)</span> ? console.<span class="built_in">log</span><span class="params">(<span class="literal">true</span>)</span> : console.<span class="built_in">log</span><span class="params">(<span class="literal">false</span>)</span>;
+</code></pre>]]></content>
+    <summary type="html">
+    <![CDATA[<p>三元运算符的语法是<strong>条件？结果1：结果2；</strong> </p>
+<pre><code><span class="params">(<span class="number">1</span>===<span class="number">1</span>]]>
+    </summary>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[JS原型继承]]></title>
+    <link href="http://gin280.github.io/my-blog/my-blog/2014/11/08/JS%E5%8E%9F%E5%9E%8B%E7%BB%A7%E6%89%BF/"/>
+    <id>http://gin280.github.io/my-blog/my-blog/2014/11/08/JS原型继承/</id>
+    <published>2014-11-08T13:11:42.000Z</published>
+    <updated>2015-08-10T05:44:24.413Z</updated>
+    <content type="html"><![CDATA[<p>原型继承的一般定义是当查找一个对象的属性时，Js会向上遍历原型链，直到找到给定名称的属性为止。</p>
+<p>大多数JS的实现用<strong>proto</strong>属性来表示一个对象的原型链。<br>下面的代码展示了js引擎是如何查找属性的：</p>
+<pre><code>    <span class="function"><span class="keyword">function</span> <span class="title">getPtoperty</span><span class="params">(obj,prop)</span> </span>{
+<span class="keyword">if</span> (obj.hasOwnProperty(prop)) {
+  <span class="keyword">return</span> obj[prop];
+}<span class="keyword">else</span> <span class="keyword">if</span> {
+  <span class="keyword">return</span> getPtoperty(obj.__proto__,prop)
+} <span class="keyword">else</span> {
+  <span class="keyword">return</span> <span class="literal">undefined</span>;
+}
+  }
+</code></pre><p>举一个简单的例子来说，二维点，拥有二维坐标 x y ，同似拥有一个 print 方法。用之前我们说过的原型继承的定义，我们创建一个对象 Point ，拥有三个属性：x，y 和 print 。为了能创建一个新的二维点，我们需要创建一个新的对象，让他其中的 <strong>proto</strong> 属性指向 Point ：</p>
+<pre><code>var Point = {
+<span class="string">x:</span><span class="number">0</span>,
+<span class="string">y:</span><span class="number">0</span>,
+<span class="string">print:</span>function() {
+  console.log(<span class="keyword">this</span>.x,<span class="keyword">this</span>.y)
+}
+  }
+  var p = { <span class="string">x:</span><span class="number">10</span>,<span class="string">y:</span><span class="number">20</span>,<span class="string">__proto__:</span>Point};
+  p.print();
+</code></pre><p>但是一般我们的原型继承的写法不会写成上面那样，而是像下面这样的：</p>
+<pre><code><span class="function"><span class="keyword">function</span> <span class="title">Point</span>(<span class="params">x,y</span>) </span>{
+<span class="keyword">this</span>.x = x;
+<span class="keyword">this</span>.y = y;
+  }
+  Point.prototype = {
+print:<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>{
+  <span class="built_in">console</span>.log(<span class="keyword">this</span>.x,<span class="keyword">this</span>.y);
+}
+      }
+  <span class="keyword">var</span> p = <span class="keyword">new</span> Point(<span class="number">10</span>,<span class="number">20</span>);
+  p.print();
+</code></pre>]]></content>
+    <summary type="html">
+    <![CDATA[<p>原型继承的一般定义是当查找一个对象的属性时，Js会向上遍历原型链，直到找到给定名称的属性为止。</p>
+<p>大多数JS的实现用<strong>proto</strong>属性来表示一个对象的原型链。<br>下面的代码展示了js引擎是如何查找属性的：</p>
+<pre><c]]>
+    </summary>
+    
+  </entry>
+  
 </feed>
