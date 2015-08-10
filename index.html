@@ -170,6 +170,85 @@
           
           
             
+              <a class="post-title-link" href="/my-blog/2015/01/28/在sass中用breakpoint写media query/">
+                在sass中用breakpoint写media query
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于 2015-01-28
+        </span>
+
+        
+
+        
+          
+            <span class="post-comments-count">
+            &nbsp; | &nbsp;
+            <a href="/my-blog/2015/01/28/在sass中用breakpoint写media query/#comments" >
+              <span class="post-comments-count ds-thread-count" data-thread-key="2015/01/28/在sass中用breakpoint写media query/"></span>
+            </a>
+          </span>
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <h2 id="先设置好变量，以后好改">先设置好变量，以后好改</h2><p>// assume min-width (by default) if only a number</p>
+<pre><code><span class="variable">$high-tide</span><span class="value">: <span class="number">500px</span>;</span>
+</code></pre><p>// set min-width/max-width if both values are numbers</p>
+<pre><code><span class="variable">$ex-presidents</span><span class="value">: <span class="number">600px</span> <span class="number">800px</span>;</span>
+</code></pre><p>// if one value is a string, assume a feature/value pair</p>
+<pre><code>$surfboard-<span class="variable">width</span>: <span class="built_in">max</span>-<span class="variable">width</span> <span class="number">1000</span>px;
+</code></pre><h2 id="在sass中可以这样写">在sass中可以这样写</h2><p>scss：</p>
+<pre><code><span class="class">.my-style</span> {
+ <span class="variable">@include</span> <span class="function">breakpoint</span>($high-tide) {
+   <span class="attribute">content</span>: <span class="string">'High tide'</span>;
+ }
+</code></pre><p>   }</p>
+<p>css:</p>
+<p>   @media (min-width: 500px) {<br>     .reagan {<br>       content: ‘High tide’;<br>     }<br>   }</p>
+
+        
+      
+    </div>
+
+    <div class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </div>
+  </div>
+
+
+    
+      
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
               <a class="post-title-link" href="/my-blog/2015/01/23/一张图搞定浏览器兼容性问题/">
                 一张图搞定浏览器兼容性问题
               </a>
@@ -592,7 +671,7 @@
         <div class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/my-blog/archives/">
-              <span class="site-state-item-count">5</span>
+              <span class="site-state-item-count">6</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

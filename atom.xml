@@ -5,7 +5,7 @@
   <subtitle><![CDATA[糖分很重要哈!!!]]></subtitle>
   <link href="/my-blog/atom.xml" rel="self"/>
   <link href="http://gin280.github.io/my-blog/my-blog//"/>
-  <updated>2015-08-04T13:49:54.948Z</updated>
+  <updated>2015-08-09T00:15:57.311Z</updated>
   <id>http://gin280.github.io/my-blog/my-blog//</id>
   
   <author>
@@ -14,6 +14,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[在sass中用breakpoint写media query]]></title>
+    <link href="http://gin280.github.io/my-blog/my-blog/2015/01/28/%E5%9C%A8sass%E4%B8%AD%E7%94%A8breakpoint%E5%86%99media%20query/"/>
+    <id>http://gin280.github.io/my-blog/my-blog/2015/01/28/在sass中用breakpoint写media query/</id>
+    <published>2015-01-28T03:14:42.000Z</published>
+    <updated>2015-08-09T00:15:57.311Z</updated>
+    <content type="html"><![CDATA[<h2 id="先设置好变量，以后好改">先设置好变量，以后好改</h2><p>// assume min-width (by default) if only a number</p>
+<pre><code><span class="variable">$high-tide</span><span class="value">: <span class="number">500px</span>;</span>
+</code></pre><p>// set min-width/max-width if both values are numbers</p>
+<pre><code><span class="variable">$ex-presidents</span><span class="value">: <span class="number">600px</span> <span class="number">800px</span>;</span>
+</code></pre><p>// if one value is a string, assume a feature/value pair</p>
+<pre><code>$surfboard-<span class="variable">width</span>: <span class="built_in">max</span>-<span class="variable">width</span> <span class="number">1000</span>px;
+</code></pre><h2 id="在sass中可以这样写">在sass中可以这样写</h2><p>scss：</p>
+<pre><code><span class="class">.my-style</span> {
+ <span class="variable">@include</span> <span class="function">breakpoint</span>($high-tide) {
+   <span class="attribute">content</span>: <span class="string">'High tide'</span>;
+ }
+</code></pre><p>   }</p>
+<p>css:</p>
+<p>   @media (min-width: 500px) {<br>     .reagan {<br>       content: ‘High tide’;<br>     }<br>   }</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h2 id="先设置好变量，以后好改">先设置好变量，以后好改</h2><p>// assume min-width (by default) if only a number</p>
+<pre><code><span class="variable">$high-tide</]]>
+    </summary>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[一张图搞定浏览器兼容性问题]]></title>
