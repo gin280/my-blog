@@ -316,6 +316,146 @@
           
           
             
+              <a class="post-title-link" href="/my-blog/2015/01/13/纯CSS实现轮播图/">
+                纯CSS实现轮播图
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于 2015-01-13
+        </span>
+
+        
+
+        
+          
+            <span class="post-comments-count">
+            &nbsp; | &nbsp;
+            <a href="/my-blog/2015/01/13/纯CSS实现轮播图/#comments" >
+              <span class="post-comments-count ds-thread-count" data-thread-key="2015/01/13/纯CSS实现轮播图/"></span>
+            </a>
+          </span>
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <p>直接上代码：<br>html：</p>
+<pre><code><span class="doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;<span class="title">html</span> <span class="attribute">lang</span>=<span class="value">"en"</span>&gt;</span>
+<span class="tag">&lt;<span class="title">head</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">meta</span> <span class="attribute">charset</span>=<span class="value">"UTF-8"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">title</span>&gt;</span>SLIDE<span class="tag">&lt;/<span class="title">title</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">link</span> <span class="attribute">rel</span>=<span class="value">"stylesheet"</span> <span class="attribute">href</span>=<span class="value">"css/slide.css"</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">head</span>&gt;</span>
+<span class="tag">&lt;<span class="title">body</span>&gt;</span>
+<span class="tag">&lt;<span class="title">ul</span> <span class="attribute">class</span>=<span class="value">"tab"</span>&gt;</span>
+            <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#d1"</span>&gt;</span>1<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+            <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#d2"</span>&gt;</span>2<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+            <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#d3"</span>&gt;</span>3<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+        <span class="tag">&lt;/<span class="title">ul</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"wrap"</span>&gt;</span>
+
+        <span class="comment">&lt;!-- tab --&gt;</span>
+        <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"content"</span>&gt;</span>
+            <span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"d1"</span>&gt;</span>1111<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+            <span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"d2"</span>&gt;</span>2222<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+            <span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"d3"</span>&gt;</span>3333<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+        <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+        <span class="comment">&lt;!-- content --&gt;</span>
+    <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+    <span class="comment">&lt;!-- wrap --&gt;</span>
+<span class="tag">&lt;/<span class="title">body</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">html</span>&gt;</span>
+</code></pre><p>scss：</p>
+<pre><code><span class="class">.wrap</span> {
+    <span class="attribute">width</span>: <span class="number">600px</span>;
+    <span class="attribute">height</span>: <span class="number">300px</span>;
+    <span class="attribute">border</span>: <span class="number">1px</span> solid <span class="hexcolor">#000</span>;
+    <span class="attribute">margin</span>: <span class="number">0</span> auto;
+    <span class="attribute">position</span>: relative;
+    <span class="attribute">overflow</span>: hidden;
+}
+
+<span class="tag">ul</span> {
+
+    <span class="attribute">list-style</span>: none;
+    <span class="attribute">z-index</span>: <span class="number">99999</span>;
+    <span class="tag">li</span> {
+        <span class="attribute">width</span>: <span class="number">100px</span>;
+        <span class="attribute">height</span>: <span class="number">50px</span>;
+        <span class="attribute">text-align</span>: center;
+        <span class="attribute">background-color</span>: red;
+        <span class="attribute">color</span>: <span class="hexcolor">#fff</span>;
+        <span class="attribute">border-bottom</span>: <span class="number">4px</span> solid <span class="hexcolor">#fff</span>;
+        <span class="attribute">z-index</span>: <span class="number">99999</span>;
+    }
+}
+
+<span class="class">.content</span> {
+    <span class="attribute">overflow</span>: hidden;
+    <span class="tag">div</span> {
+        <span class="attribute">width</span>: <span class="number">600px</span>;
+        <span class="attribute">height</span>: <span class="number">300px</span>;
+    }
+}
+
+<span class="id">#d1</span> {
+    <span class="attribute">background-color</span>: blue;
+}
+
+<span class="id">#d2</span> {
+    <span class="attribute">background-color</span>: yellow;
+}
+
+<span class="id">#d3</span> {
+    <span class="attribute">background-color</span>: cyan;
+}
+
+<span class="tag">body</span> {
+    <span class="attribute">background-color</span>: <span class="hexcolor">#333</span>;
+}
+</code></pre>
+        
+      
+    </div>
+
+    <div class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </div>
+  </div>
+
+
+    
+      
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
               <a class="post-title-link" href="/my-blog/2015/01/12/CSS3中REM的使用/">
                 CSS3中REM的使用
               </a>
@@ -850,105 +990,6 @@
 
 
     
-      
-
-  <div class="post post-type-normal ">
-    <div class="post-header">
-
-      
-      
-        <h1 class="post-title">
-          
-          
-            
-              <a class="post-title-link" href="/my-blog/2014/11/12/HTML5的data-属性/">
-                HTML5的data-属性
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          发表于 2014-11-12
-        </span>
-
-        
-
-        
-          
-            <span class="post-comments-count">
-            &nbsp; | &nbsp;
-            <a href="/my-blog/2014/11/12/HTML5的data-属性/#comments" >
-              <span class="post-comments-count ds-thread-count" data-thread-key="2014/11/12/HTML5的data-属性/"></span>
-            </a>
-          </span>
-          
-        
-      </div>
-    </div>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <p>HTML5的data-是用来定义自定义属性的。下面的是一个相关的例子：</p>
-<pre><code>    <span class="doctype">&lt;!DOCTYPE html&gt;</span>
-<span class="tag">&lt;<span class="title">html</span> <span class="attribute">lang</span>=<span class="value">"en"</span>&gt;</span>
-<span class="tag">&lt;<span class="title">head</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">meta</span> <span class="attribute">charset</span>=<span class="value">"UTF-8"</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="title">title</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">style</span>&gt;</span><span class="css">
-<span class="class">.myOwn</span> <span class="rules">{
-  <span class="rule"><span class="attribute">background-color</span>:<span class="value"> <span class="hexcolor">#666</span></span></span>;
-  <span class="rule"><span class="attribute">text-align</span>:<span class="value"> center</span></span>;
-  <span class="rule"><span class="attribute">color</span>:<span class="value"> <span class="hexcolor">#fff</span></span></span>;
-  <span class="rule"><span class="attribute">border</span>:<span class="value"> <span class="number">1px</span> solid <span class="hexcolor">#000</span></span></span>;
-}</span>
-  </span><span class="tag">&lt;/<span class="title">style</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">head</span>&gt;</span>
-<span class="tag">&lt;<span class="title">body</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">data-myOwn</span>=<span class="value">"header"</span>&gt;</span>
-<span class="tag">&lt;<span class="title">h1</span>&gt;</span>我是个一个用了自定义属性的div<span class="tag">&lt;/<span class="title">h1</span>&gt;</span>
-  <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">br</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">div</span>&gt;</span>我什么都不是。。<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-<span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"js/jquery-1.7.2.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
-<span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="javascript">
-  $(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>{
-<span class="keyword">var</span> el = $(<span class="string">'div'</span>);
-   el.each(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>{
-<span class="keyword">if</span>($(<span class="keyword">this</span>).attr(<span class="string">'data-myOwn'</span>) == <span class="string">'header'</span>) {
-  $(<span class="keyword">this</span>).addClass(<span class="string">'myOwn'</span>);
-}
-   })
-  })
-</span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">body</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">html</span>&gt;</span>
-</code></pre>
-        
-      
-    </div>
-
-    <div class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </div>
-  </div>
-
-
-    
   </div>
 
   
@@ -987,7 +1028,7 @@
         <div class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/my-blog/archives/">
-              <span class="site-state-item-count">14</span>
+              <span class="site-state-item-count">15</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

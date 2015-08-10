@@ -47,7 +47,7 @@
 
 
 
-  <title> jQuery的deferred对象 // 玉桂芳香 </title>
+  <title> 纯CSS实现轮播图 // 玉桂芳香 </title>
 </head>
 
 <body>
@@ -168,7 +168,7 @@
           
           
             
-              jQuery的deferred对象
+              纯CSS实现轮播图
             
           
         </h1>
@@ -176,7 +176,7 @@
 
       <div class="post-meta">
         <span class="post-time">
-          发表于 2014-11-10
+          发表于 2015-01-13
         </span>
 
         
@@ -185,8 +185,8 @@
           
             <span class="post-comments-count">
             &nbsp; | &nbsp;
-            <a href="/my-blog/2014/11/10/jQuery的deferred对象/#comments" >
-              <span class="post-comments-count ds-thread-count" data-thread-key="2014/11/10/jQuery的deferred对象/"></span>
+            <a href="/my-blog/2015/01/13/纯CSS实现轮播图/#comments" >
+              <span class="post-comments-count ds-thread-count" data-thread-key="2015/01/13/纯CSS实现轮播图/"></span>
             </a>
           </span>
           
@@ -200,25 +200,81 @@
       
 
       
-        <p>deferred对象就是jquery的回调函数的解决方案。它解决了如何处理耗时操作问题。</p>
-<p>在没有deferred对象之前ajax的传统写法：</p>
-<pre><code>$.ajax({
-  url:<span class="string">'test.html'</span>,
-  success:<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>{
-    <span class="built_in">console</span>.log(<span class="string">'success'</span>);
-  },
-  error:<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>{
-    <span class="built_in">console</span>.log(<span class="string">'wrong'</span>);
-  }
-   });
-</code></pre><p>新的写法是：</p>
-<pre><code>$.ajax(<span class="string">'test.html'</span>)
-.done(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>{
-  <span class="built_in">console</span>.log(<span class="string">'success'</span>)
-})
-.fail(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>{
-  <span class="built_in">console</span>.log(<span class="string">'wrong'</span>)
-})
+        <p>直接上代码：<br>html：</p>
+<pre><code><span class="doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;<span class="title">html</span> <span class="attribute">lang</span>=<span class="value">"en"</span>&gt;</span>
+<span class="tag">&lt;<span class="title">head</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">meta</span> <span class="attribute">charset</span>=<span class="value">"UTF-8"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">title</span>&gt;</span>SLIDE<span class="tag">&lt;/<span class="title">title</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">link</span> <span class="attribute">rel</span>=<span class="value">"stylesheet"</span> <span class="attribute">href</span>=<span class="value">"css/slide.css"</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">head</span>&gt;</span>
+<span class="tag">&lt;<span class="title">body</span>&gt;</span>
+<span class="tag">&lt;<span class="title">ul</span> <span class="attribute">class</span>=<span class="value">"tab"</span>&gt;</span>
+            <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#d1"</span>&gt;</span>1<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+            <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#d2"</span>&gt;</span>2<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+            <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#d3"</span>&gt;</span>3<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+        <span class="tag">&lt;/<span class="title">ul</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"wrap"</span>&gt;</span>
+
+        <span class="comment">&lt;!-- tab --&gt;</span>
+        <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"content"</span>&gt;</span>
+            <span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"d1"</span>&gt;</span>1111<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+            <span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"d2"</span>&gt;</span>2222<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+            <span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"d3"</span>&gt;</span>3333<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+        <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+        <span class="comment">&lt;!-- content --&gt;</span>
+    <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+    <span class="comment">&lt;!-- wrap --&gt;</span>
+<span class="tag">&lt;/<span class="title">body</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">html</span>&gt;</span>
+</code></pre><p>scss：</p>
+<pre><code><span class="class">.wrap</span> {
+    <span class="attribute">width</span>: <span class="number">600px</span>;
+    <span class="attribute">height</span>: <span class="number">300px</span>;
+    <span class="attribute">border</span>: <span class="number">1px</span> solid <span class="hexcolor">#000</span>;
+    <span class="attribute">margin</span>: <span class="number">0</span> auto;
+    <span class="attribute">position</span>: relative;
+    <span class="attribute">overflow</span>: hidden;
+}
+
+<span class="tag">ul</span> {
+
+    <span class="attribute">list-style</span>: none;
+    <span class="attribute">z-index</span>: <span class="number">99999</span>;
+    <span class="tag">li</span> {
+        <span class="attribute">width</span>: <span class="number">100px</span>;
+        <span class="attribute">height</span>: <span class="number">50px</span>;
+        <span class="attribute">text-align</span>: center;
+        <span class="attribute">background-color</span>: red;
+        <span class="attribute">color</span>: <span class="hexcolor">#fff</span>;
+        <span class="attribute">border-bottom</span>: <span class="number">4px</span> solid <span class="hexcolor">#fff</span>;
+        <span class="attribute">z-index</span>: <span class="number">99999</span>;
+    }
+}
+
+<span class="class">.content</span> {
+    <span class="attribute">overflow</span>: hidden;
+    <span class="tag">div</span> {
+        <span class="attribute">width</span>: <span class="number">600px</span>;
+        <span class="attribute">height</span>: <span class="number">300px</span>;
+    }
+}
+
+<span class="id">#d1</span> {
+    <span class="attribute">background-color</span>: blue;
+}
+
+<span class="id">#d2</span> {
+    <span class="attribute">background-color</span>: yellow;
+}
+
+<span class="id">#d3</span> {
+    <span class="attribute">background-color</span>: cyan;
+}
+
+<span class="tag">body</span> {
+    <span class="attribute">background-color</span>: <span class="hexcolor">#333</span>;
+}
 </code></pre>
       
     </div>
@@ -230,13 +286,13 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/my-blog/2014/11/11/jQuery中的end()方法/">jQuery中的end()方法</a>
+              <a href="/my-blog/2015/01/23/一张图搞定浏览器兼容性问题/">一张图搞定浏览器兼容性问题</a>
             
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/my-blog/2014/11/09/JS三元运算符/">JS三元运算符</a>
+              <a href="/my-blog/2015/01/12/CSS3中REM的使用/">CSS3中REM的使用</a>
             
           </div>
         </div>
@@ -254,8 +310,8 @@
     
       <div class="comments" id="comments">
         
-          <div class="ds-thread" data-thread-key="2014/11/10/jQuery的deferred对象/"
-               data-title="jQuery的deferred对象" data-url="http://gin280.github.io/my-blog/2014/11/10/jQuery的deferred对象/">
+          <div class="ds-thread" data-thread-key="2015/01/13/纯CSS实现轮播图/"
+               data-title="纯CSS实现轮播图" data-url="http://gin280.github.io/my-blog/2015/01/13/纯CSS实现轮播图/">
           </div>
         
       </div>
